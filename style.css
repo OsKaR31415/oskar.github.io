@@ -57,7 +57,25 @@ p {
 	
 }
 
+.button {
+    font-size: 25pt;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+    padding-top: 5px;
+    background-color: #0040AA;
+    border: solid;
+    border-color: #0040AA;
+    border-radius: 7pt;
+    border-width: 1px;
+}
 
+.button:hover {
+    color: black;
+    background-color: #0040AA;
+    border-color: black;
+    border-width: 3px;
+}
 
 
 
@@ -86,6 +104,7 @@ a h1:hover {
 
 a {
     color: #0080FF;
+    text-decoration: none;
 }
 a:hover {
     color: #30B0FF;
@@ -134,7 +153,7 @@ title::after {
 }
 
 nav{
-    width: 100%;
+    width: 95%;
     margin: 0 auto;
     background-color: orange;
     color: white;
@@ -202,6 +221,7 @@ nav > ul li:hover .sous_menu{
     content:" ▼";
     font-size: 12px;
 }
+
 
 .sous_menu_content {
 	font-size: 11pt;
