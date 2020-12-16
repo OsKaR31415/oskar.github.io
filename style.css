@@ -115,6 +115,9 @@ a:hover {
     color: #30B0FF;
 }
 
+p > a::before {
+    content: "🔗 ";
+}
 
 img {
     border: 3pt solid black;
