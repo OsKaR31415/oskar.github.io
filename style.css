@@ -1,27 +1,4 @@
 :root {
-	--background-color: RGB(40, 41, 35);
-	--text-color: white;
-
-
-	--first-theme-color: orange;/*#ECA67D;*/
-    --first-theme-color-dark: darkorange;
-    --first-theme-color-light: gold;
-
-	--second-theme-color: #0080FF;
-    --second-theme-color-dark: #0020FF;
-    --second-theme-color-light: #30B0FF;
-
-
-	--menu-underline-color: royalblue;
-	--menu-highlight-color: ;
-	--menu-background-color: var(--first-theme-color);
-	--menu-text-color: white;
-	--menu-text-highlight-color: black;
-
-	--tel-color: orange; /*#2480FF;*/
-	--tel-highlight-color: darkorange; /*#589CFA;*/
-	--tel-background-color: ;
-
 
 	--menu-height: 300pt;
 }
@@ -30,12 +7,12 @@
 
 body {
 	text-align: center;
-	color: var(--text-color);
+	color: var(white);
 	text-rendering: optimizeLegibility;
 	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
     font-weight: bold;
 	
-	background-color: var(--background-color);
+	background-color: var(RGB(40, 41, 35));
 	background-image: url('images/fond.jpg');
 	/*background-repeat: no-repeat;*/
 	background-attachment: fixed;  
@@ -46,12 +23,12 @@ h1 {
 	font-size: 30pt;
 	font-family: Palatino;
 	font-weight: normal;
-	color: var(--first-theme-color);
+	color: var(orange);
 }
 
 h2 {
 	font-size: 20pt;
-	color: var(--second-theme-color);
+	color: var(#0080FF);
 }
 
 h3 {
@@ -68,7 +45,7 @@ h4 {
 p {
 	font-size: 12pt;
 	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
-	color: var(--text-color);
+	color: var(white);
 	font-weight: lighter;
 
 	text-align: left;
@@ -88,7 +65,7 @@ p {
 	font-family: Menlo;
 	font-size: 14pt; /* correspond à 20pt en verdanna */
 	text-decoration: none; /*ATTENTION: il faut aussi modifier la balise <a></a> qui entoure le tel.*/
-	color: var(--tel-color);
+	color: orange;
 
 	word-spacing: 2pt;
 
@@ -98,21 +75,20 @@ p {
 }
 
 .tel:hover {
-	background-color: var(--tel-background-color);
-	color: var(--tel-highlight-color);
+	color: #2480FF;
     text-decoration: underline;
 }
 
 a h1:hover {
-    color: var(--first-theme-color-light);
+    color: var(gold);
     text-decoration: underline;
 }
 
 a {
-    color: var(--second-theme-color);
+    color: var(#0080FF);
 }
 a:hover {
-    color: var(--second-theme-color-light);
+    color: var(#30B0FF);
 }
 
 
@@ -160,8 +136,8 @@ title::after {
 nav{
     width: 100%;
     margin: 0 auto;
-    background-color: var(--menu-background-color);
-    color: var(--text-color);
+    background-color: var(orange);
+    color: var(white);
     position: sticky;
     top: 0px;
 }
@@ -186,21 +162,21 @@ nav ul::after{
 nav a{
     display: block;
     text-decoration: none;
-    color: var(--menu-text-color);
+    color: var(orange);
     border-bottom: 2px solid transparent;
     padding: 10px 0px;
 }
 
 nav a:hover{
-    color: var(--menu-text-highlight-color);
-    border-bottom: 2px solid var(--menu-underline-color);
+    color: var(black);
+    border-bottom: 2px solid var(royalblue);
 }
 
 .sous_menu{
     display: none;
     box-shadow: 0px 1px 2px #CCC;
-    background-color: var(--background-color);
-    color: var(--menu-text-color);
+    background-color: var(RGB(40, 41, 35));
+    color: var(orange);
     position: absolute;
     width: 100%;
     z-index: 1000;
@@ -219,7 +195,6 @@ nav > ul li:hover .sous_menu{
 }
 .sous_menu a:hover{
     border-bottom: none;
-    background-color: var(--menu-highlight-color);
 }
 .menu_deroulant > a::after{
     content:" ▼";
