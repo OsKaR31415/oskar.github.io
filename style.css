@@ -162,13 +162,13 @@ nav ul::after{
 nav a{
     display: block;
     text-decoration: none;
-    color: darkgray;
+    color: white;
     border-bottom: 2px solid transparent;
     padding: 10px 0px;
 }
 
 nav a:hover{
-    color: black;
+    color: lightgrey;
     border-bottom: 2px solid royalblue;
 }
 
@@ -184,10 +184,12 @@ nav a:hover{
 nav > ul li:hover .sous_menu{
     display: block;
 }
+
 .sous_menu li{
     float: none;
     width: 100%;
     text-align: left;
+    text-decoration: none;
 }
 .sous_menu a{
     padding: 10px;
