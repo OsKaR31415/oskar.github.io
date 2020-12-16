@@ -115,7 +115,7 @@ a:hover {
     color: #30B0FF;
 }
 
-p > a::before {
+a > p::before {
     content: "🔗 ";
 }
 
