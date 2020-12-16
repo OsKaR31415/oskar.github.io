@@ -20,19 +20,19 @@ body {
 }
 
 h1 {
-	font-size: 30pt;
+	font-size: 60pt;
 	font-family: Palatino;
 	font-weight: normal;
 	color: orange;
 }
 
 h2 {
-	font-size: 20pt;
+	font-size: 40pt;
 	color: #0080FF;
 }
 
 h3 {
-	font-size: 15t;
+	font-size: 30t;
 	font-family: Arial;
 }
 
@@ -43,7 +43,7 @@ h4 {
 
 
 p {
-	font-size: 12pt;
+	font-size: 20pt;
 	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 	color: white;
 	font-weight: lighter;
