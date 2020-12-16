@@ -61,9 +61,9 @@ p {
     font-size: 25pt;
     color: white;
     text-decoration: none;
-    text-align: left;
     padding-top: 5px;
-    background-color: #0040AA;
+    padding-right: 100%;
+    background-color: orange;
     border: solid;
     border-color: #0040AA;
     border-radius: 7pt;
@@ -72,7 +72,7 @@ p {
 
 .button:hover {
     color: black;
-    background-color: #0040AA;
+    background-color: darkorange;
     border-color: black;
     border-width: 3px;
 }
@@ -98,6 +98,11 @@ p {
 }
 
 a h1:hover {
+    color: gold;
+    text-decoration: underline;
+}
+
+a h2:hover {
     color: gold;
     text-decoration: underline;
 }
@@ -187,7 +192,7 @@ nav a{
 }
 
 nav a:hover{
-    color: #0059B2;
+    color: aliceblue;
     border-bottom: 2px solid royalblue;
 }
 
