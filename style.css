@@ -119,6 +119,10 @@ a > p::before {
     content: "🔗 ";
 }
 
+a > p:hover {
+    color: #0080FF;
+}
+
 img {
     border: 3pt solid black;
     margin: auto;
