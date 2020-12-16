@@ -1,0 +1,231 @@
+:root {
+	--background-color: RGB(40, 41, 35);
+	--text-color: white;
+
+
+	--first-theme-color: orange;/*#ECA67D;*/
+    --first-theme-color-dark: darkorange;
+    --first-theme-color-light: gold;
+
+	--second-theme-color: #0080FF;
+    --second-theme-color-dark: #0020FF;
+    --second-theme-color-light: #30B0FF;
+
+
+	--menu-underline-color: ;
+	--menu-highlight-color: ;
+	--menu-background-color: var(--first-theme-color);
+	--menu-text-color: white;
+	--menu-text-highlight-color: black;
+
+	--tel-color: orange; /*#2480FF;*/
+	--tel-highlight-color: darkorange; /*#589CFA;*/
+	--tel-background-color: ;
+
+
+	--menu-height: 250pt;
+}
+
+
+
+body {
+	text-align: center;
+	color: var(--text-color);
+	text-rendering: optimizeLegibility;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    font-weight: bold;
+	
+	background-color: var(--background-color);
+	background-image: url('images/fond.jpg');
+	/*background-repeat: no-repeat;*/
+	background-attachment: fixed;  
+  	/*background-size: cover;*/
+}
+
+h1 {
+	font-size: 30pt;
+	font-family: Palatino;
+	font-weight: normal;
+	color: var(--first-theme-color);
+}
+
+h2 {
+	font-size: 20pt;
+	color: var(--second-theme-color);
+}
+
+h3 {
+	font-size: 15t;
+	font-family: Arial;
+}
+
+h4 {
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+	font-weight: lighter;
+}
+
+
+p {
+	font-size: 12pt;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+	color: var(--text-color);
+	font-weight: lighter;
+
+	text-align: left;
+	text-indent: 4ex;
+}
+
+.nom_site {
+	font-size: 40pt;
+	
+}
+
+
+
+.tel {
+	font-family: Menlo;
+	font-size: 14pt; /* correspond à 20pt en verdanna */
+	text-decoration: none; /*ATTENTION: il faut aussi modifier la balise <a></a> qui entoure le tel.*/
+	color: var(--tel-color);
+
+	word-spacing: 2pt;
+
+	border-radius: 4pt;
+	border-width: 1px;
+	border-style: none;
+}
+
+.tel:hover {
+	background-color: var(--tel-background-color);
+	color: var(--tel-highlight-color);
+    text-decoration: underline;
+}
+
+a h1:hover {
+    color: var(--first-theme-color-light);
+    text-decoration: underline;
+}
+
+a {
+    color: var(--second-theme-color);
+}
+a:hover {
+    color: var(--second-theme-color-light);
+}
+
+
+img {
+    border: 3pt solid black;
+    margin: auto;
+    padding: 1pt 1pt;
+    width: 0cm;
+    background-color: lightgrey;
+}
+
+
+
+
+
+
+
+
+/***********************\
+|***********************|
+|* INTEGRATION DU MENU *|
+|***********************|
+\***********************/
+
+header iframe {
+    border: none;
+    border-width: -1cm;
+    height: 50pt;
+    width: 100%;
+}
+header iframe:hover {
+	height: var(--menu-height);
+}
+
+/******************************\
+|******************************|
+|* STYLE DES MENUS DÉROULANTS *|
+|******************************|
+\******************************/
+
+title::after {
+	content: "OsKaR";
+}
+
+nav{
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--menu-background-color);
+    color: var(--text-color);
+    position: sticky;
+    top: 0px;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav ul li{
+    float: left;
+    width: 25%;
+    text-align: center;
+    position: relative;
+}
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+    color: var(--menu-text-color);
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+
+nav a:hover{
+    color: var(--menu-text-highlight-color);
+    border-bottom: 2px solid var(--menu-underline-color);
+}
+
+.sous_menu{
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    background-color: var(--background-color);
+    color: var(--menu-text-color);
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+nav > ul li:hover .sous_menu{
+    display: block;
+}
+.sous_menu li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+.sous_menu a{
+    padding: 10px;
+    border-bottom: none;
+}
+.sous_menu a:hover{
+    border-bottom: none;
+    background-color: var(--menu-highlight-color);
+}
+.menu_deroulant > a::after{
+    content:" ▼";
+    font-size: 12px;
+}
+
+.sous_menu_content {
+	font-size: 11pt;
+}
+
+
