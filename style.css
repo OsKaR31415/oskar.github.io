@@ -162,7 +162,7 @@ nav ul::after{
 nav a{
     display: block;
     text-decoration: none;
-    color: orange;
+    color: lightgrey;
     border-bottom: 2px solid transparent;
     padding: 10px 0px;
 }
@@ -176,7 +176,7 @@ nav a:hover{
     display: none;
     box-shadow: 0px 1px 2px #CCC;
     background-color: RGB(40, 41, 35);
-    color: orange;
+    color: white;
     position: absolute;
     width: 100%;
     z-index: 1000;
