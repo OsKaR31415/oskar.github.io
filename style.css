@@ -162,7 +162,7 @@ nav ul::after{
 nav a{
     display: block;
     text-decoration: none;
-    color: lightgrey;
+    color: darkgray;
     border-bottom: 2px solid transparent;
     padding: 10px 0px;
 }
