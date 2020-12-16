@@ -12,7 +12,7 @@
     --second-theme-color-light: #30B0FF;
 
 
-	--menu-underline-color: ;
+	--menu-underline-color: grey;
 	--menu-highlight-color: ;
 	--menu-background-color: var(--first-theme-color);
 	--menu-text-color: white;
