@@ -13,9 +13,9 @@ body {
     font-weight: bold;
 	
 	background-color: RGB(40, 41, 35);
-	background-image: url('images/fond.jpg');
+	/*background-image: url('images/fond.jpg');*/
 	/*background-repeat: no-repeat;*/
-	background-attachment: fixed;  
+	/*background-attachment: fixed;  */
   	/*background-size: cover;*/
 }
 
