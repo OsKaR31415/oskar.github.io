@@ -169,11 +169,11 @@ title::after {
 
 nav{
     width: 100%;
-    margin: 0 auto;
+    margin: -10 auto;
     background-color: orange;
     color: white;
     position: fixed;
-    top: 5px;
+    top: 0px;
     font-size: 20px;
 }
 
@@ -216,6 +216,7 @@ nav a:hover{
     position: absolute;
     width: 100%;
     z-index: 1000;
+    font-size: 20pt;
 }
 nav > ul li:hover .sous_menu{
     display: block;
@@ -236,12 +237,18 @@ nav > ul li:hover .sous_menu{
 }
 .menu_deroulant > a::after{
     content:" ▼";
-    font-size: 20px;
+    font-size: 25px;
 }
 
+.menu_deroulant {
+    font-size: 25pt
+}
 
+.menu {
+    font-size: 25pt
+}
 .sous_menu_content {
-	font-size: 20pt;
+	/*font-size: 20pt;*/
 }
 
 
