@@ -131,7 +131,10 @@ img {
     background-color: lightgrey;
 }
 
-
+body > div::before {
+    content: "\n\n\n";
+    font-size: 40px;
+}
 
 
 
@@ -165,12 +168,13 @@ title::after {
 }
 
 nav{
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
     background-color: orange;
     color: white;
-    position: sticky;
-    top: 0px;
+    position: fixed;
+    top: 5px;
+    font-size: 20px;
 }
 
 nav ul{
@@ -199,9 +203,10 @@ nav a{
 }
 
 nav a:hover{
-    color: aliceblue;
-    border-bottom: 2px solid royalblue;
+    color: #B46300;
+    border-bottom: 2px solid #B46300;
 }
+
 
 .sous_menu{
     display: none;
@@ -231,12 +236,12 @@ nav > ul li:hover .sous_menu{
 }
 .menu_deroulant > a::after{
     content:" ▼";
-    font-size: 12px;
+    font-size: 20px;
 }
 
 
 .sous_menu_content {
-	font-size: 11pt;
+	font-size: 20pt;
 }
 
 
