@@ -132,7 +132,10 @@ img {
 }
 
 body > div::before {
-    content: "\n\n\n";
+    content: "\
+42\
+\
+";
     font-size: 40px;
 }
 
