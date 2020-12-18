@@ -19,6 +19,16 @@ body {
   	/*background-size: cover;*/
 }
 
+body::after {
+    /*border: 0pt solid white;*/
+    /*border-top: 3pt solid white;*/
+    padding-left: 5%;
+    padding-right: 85%;
+    content: '42';
+    color: RGB(40, 41, 35); 
+    font-size: 500pt;
+}
+
 h1 {
 	font-size: 60pt;
 	font-family: Palatino;
@@ -32,7 +42,7 @@ h2 {
 }
 
 h3 {
-	font-size: 30t;
+	font-size: 50t;
 	font-family: Arial;
 }
 
