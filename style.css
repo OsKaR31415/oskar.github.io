@@ -11,6 +11,7 @@ body {
 	text-rendering: optimizeLegibility;
 	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
     font-weight: bold;
+    font-size: 20pt;
 	
 	background-color: RGB(40, 41, 35);
 	/*background-image: url('images/fond.jpg');*/
@@ -26,7 +27,7 @@ body::after {
     padding-right: 85%;
     content: '42';
     color: RGB(40, 41, 35); 
-    font-size: 500pt;
+    font-size: 200pt;
 }
 
 h1 {
@@ -42,7 +43,7 @@ h2 {
 }
 
 h3 {
-	font-size: 50t;
+	font-size: 30pt;
 	font-family: Arial;
 }
 
@@ -72,12 +73,15 @@ p {
     color: white;
     text-decoration: none;
     padding-top: 5px;
-    padding-right: 100%;
+    padding-right: 50%;
+    text-align: right;
     background-color: orange;
     border: solid;
-    border-color: #0040AA;
+    border-color: darkorange;
     border-radius: 7pt;
-    border-width: 1px;
+    border-width: 3px;
+    /*position: absolute;*/
+    transition: 0.2s;
 }
 
 .button:hover {
@@ -127,10 +131,12 @@ a:hover {
 
 a > p::before {
     content: "🔗 ";
+    transition: 0.2s;
 }
 
 a > p:hover {
     color: #0080FF;
+    transition: 0.2s;
 }
 
 img {
@@ -212,12 +218,13 @@ nav a{
     text-decoration: none;
     color: white;
     border-bottom: 2px solid transparent;
-    padding: 10px 0px;
+    padding: -10px 0px;
 }
 
 nav a:hover{
-    color: #B46300;
-    border-bottom: 2px solid #B46300;
+    color: #257542;
+    border-bottom: 2px solid #257542;
+    transition: 0.2s;
 }
 
 
@@ -241,6 +248,7 @@ nav > ul li:hover .sous_menu{
     text-align: left;
     text-decoration: none;
 }
+
 .sous_menu a{
     padding: 10px;
     border-bottom: none;
@@ -260,8 +268,4 @@ nav > ul li:hover .sous_menu{
 .menu {
     font-size: 25pt
 }
-.sous_menu_content {
-	/*font-size: 20pt;*/
-}
-
 
