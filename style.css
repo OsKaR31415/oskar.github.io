@@ -135,7 +135,7 @@ a > p::before {
 }
 
 a > p:hover {
-    color: #0080FF;
+    color: #0E692B;
     transition: 0.2s;
 }
 
@@ -222,9 +222,10 @@ nav a{
 }
 
 nav a:hover{
-    color: #257542;
-    border-bottom: 2px solid #257542;
+    color: #0E692B;
+    border-bottom: 2px solid #0E692B;
     transition: 0.2s;
+    font-weight: bold;
 }
 
 
