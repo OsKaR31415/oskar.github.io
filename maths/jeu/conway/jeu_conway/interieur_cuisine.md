@@ -1,0 +1,3 @@
+- mettre vidéo Conway sur le jeu de la vie + hommage etc...
+
+# retour à la base du site

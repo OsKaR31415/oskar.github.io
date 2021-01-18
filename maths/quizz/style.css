@@ -79,11 +79,10 @@ p {
 }
 
 .button:hover {
-    color: black;
+    color: #0E692B;
     background-color: darkorange;
-    border-color: black;
+    border-color: #0E692B;
     border-width: 3px;
-    transition: 0.2s;
 }
 
 
@@ -135,9 +134,11 @@ a > p:hover {
 }
 
 img {
-    /*border: 1pt solid black;*/
+    border: 3pt solid black;
     margin: auto;
-    /* padding: 1pt 1pt;*/
+    padding: 1pt 1pt;
+    width: 0cm;
+    background-color: lightgrey;
 }
 
 body > div::before {
@@ -146,120 +147,4 @@ body > div::before {
 \
 ";
     font-size: 40px;
-}
-
-
-
-
-
-
-/***********************\
-|***********************|
-|* INTEGRATION DU MENU *|
-|***********************|
-\***********************/
-/*
-header iframe {
-    border: none;
-    border-width: -1cm;
-    height: 50pt;
-    width: 100%;
-}
-header iframe:hover {
-	height: var(--menu-height);
-}
-*/
-
-/******************************\
-|******************************|
-|* STYLE DES MENUS DÉROULANTS *|
-|******************************|
-\******************************/
-
-title::after {
-	content: "OsKaR";
-}
-
-nav{
-    width: 100%;
-    margin: -10 auto;
-    background-color: orange;
-    color: white;
-    position: fixed;
-    top: 0px;
-    font-size: 20px;
-}
-
-nav ul{
-    list-style-type: none;
-}
-
-nav ul li{
-    float: left;
-    width: 25%;
-    text-align: center;
-    position: relative;
-}
-
-nav ul::after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-nav a{
-    display: block;
-    text-decoration: none;
-    color: white;
-    border-bottom: 2px solid transparent;
-    padding: -10px 0px;
-}
-
-nav a:hover{
-    color: #0E692B;
-    border-bottom: 2px solid #0E692B;
-    transition: 0.2s;
-    font-weight: bold;
-}
-
-
-.sous_menu{
-    display: none;
-    box-shadow: 0px 1px 2px #CCC;
-    background-color: RGB(40, 41, 35);
-    color: white;
-    position: absolute;
-    width: 100%;
-    z-index: 1000;
-    font-size: 20pt;
-}
-nav > ul li:hover .sous_menu{
-    display: block;
-}
-
-.sous_menu li{
-    float: none;
-    width: 100%;
-    text-align: left;
-    text-decoration: none;
-}
-
-.sous_menu a{
-    padding: 10px;
-    border-bottom: none;
-}
-.sous_menu a:hover{
-    border-bottom: none;
-}
-.menu_deroulant > a::after{
-    content:" ▼";
-    font-size: 25px;
-}
-
-.menu_deroulant {
-    font-size: 25pt
-}
-
-.menu {
-    font-size: 25pt
 }

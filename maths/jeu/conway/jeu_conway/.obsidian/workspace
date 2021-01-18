@@ -1,0 +1,101 @@
+{
+  "main": {
+    "id": "acaab0e451e67cfd",
+    "type": "split",
+    "children": [
+      {
+        "id": "f6d9471993ac1ee8",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Archives.md",
+            "mode": "preview"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "89ba97475469fcc0",
+    "type": "split",
+    "children": [
+      {
+        "id": "23b9e0007b2374ea",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "52f85474451fcd3a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "d65a2976c0b2f661",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 277,
+    "collapsed": true
+  },
+  "right": {
+    "id": "4be7b9868d00ca24",
+    "type": "split",
+    "children": [
+      {
+        "id": "f4830b21ac44c2c0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f6e8d3e54835b2a8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Archives.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "Archives.md",
+    "Clef des archives.md",
+    "bureau.md",
+    "hall.md",
+    "Archives_fermées.md",
+    "Introduction.md",
+    "interieur_cuisine.md",
+    "ordi_ouvert_ao.md",
+    "bureau_ao.md",
+    "hall_ao.md"
+  ]
+}
