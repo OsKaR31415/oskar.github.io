@@ -8,11 +8,8 @@
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Archives.md",
-            "mode": "preview"
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -70,7 +67,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Archives.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +84,7 @@
   },
   "lastOpenFiles": [
     "Archives.md",
+    "prendre le livre.md",
     "Clef des archives.md",
     "bureau.md",
     "hall.md",
@@ -95,7 +92,6 @@
     "Introduction.md",
     "interieur_cuisine.md",
     "ordi_ouvert_ao.md",
-    "bureau_ao.md",
-    "hall_ao.md"
+    "bureau_ao.md"
   ]
 }

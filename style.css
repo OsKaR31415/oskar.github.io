@@ -140,7 +140,7 @@ img {
     /* padding: 1pt 1pt;*/
 }
 
-body > div::before {
+body > div::before {   
     content: "\
 42\
 \
