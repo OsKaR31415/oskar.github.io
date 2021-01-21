@@ -8,8 +8,11 @@
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "hall.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -50,8 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277,
-    "collapsed": true
+    "width": 277
   },
   "right": {
     "id": "4be7b9868d00ca24",
@@ -67,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "hall.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -83,13 +86,13 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "hall.md",
+    "Introduction.md",
     "Archives.md",
     "prendre le livre.md",
     "Clef des archives.md",
     "bureau.md",
-    "hall.md",
     "Archives_fermées.md",
-    "Introduction.md",
     "interieur_cuisine.md",
     "ordi_ouvert_ao.md",
     "bureau_ao.md"
