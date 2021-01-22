@@ -38,7 +38,6 @@ Jour de la semaine
     }
 
     function toDay(day, month, year){
-      // TODO
         if ((month <= 2) & (day < 28)) {
             while (compressMonthDay(month, day) != compressMonthDay(2, 2)) {
                 if (compressMonthDay(month, day) < compressMonthDay(2, 2)) {
@@ -59,14 +58,16 @@ Jour de la semaine
             }
         } else {
             while (compressMonthDay(month, day) != compressMonthDay(8, 8)) {
-                if compressMonthDay(month, day) < compressMonthDay(8, 8) {
-                    if day >= 30 {
+                if (compressMonthDay(month, day) < compressMonthDay(8, 8)) {
+                    if (day >= 30) {
                         day = 1
                         month += 1
                     } else {
                         day += 1
-                    } else {
-                        if day <= 30 {
+                    }
+                    }
+                    else {
+                        if (day <= 30) {
                             day = 30
                             month -= 1
                         } else {
