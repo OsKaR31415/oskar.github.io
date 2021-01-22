@@ -1,4 +1,4 @@
-input = document.getElementById("input_date");
+znput = document.getElementById("input_date");
 aff = document.getElementById("aff");
 
 DAYS = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
