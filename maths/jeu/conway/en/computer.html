@@ -56,7 +56,26 @@ Jour de la semaine
                     }
                 }
             }
+        } else {
+            while (compressMonthDay(month, day) != compressMonthDay(8, 8)) {
+                if compressMonthDay(month, day) < compressMonthDay(8, 8) {
+                    if day >= 30 {
+                        day = 1
+                        month += 1
+                    } else {
+                        day += 1
+                    } else {
+                        if day <= 30 {
+                            day = 30
+                            month -= 1
+                        } else {
+                            day -= 1
+                        }
+                    }
+                }
+            }
         }
+        alert("the day is" + day.toString() + " / " + month.toString())
 
     }
 
