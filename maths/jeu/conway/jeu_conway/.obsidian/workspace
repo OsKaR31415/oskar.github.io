@@ -4,15 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "f6d9471993ac1ee8",
+        "id": "a89051292bd1e1ea",
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "hall.md",
-            "mode": "source"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -69,7 +66,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "hall.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,15 +82,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "Untitled 1.md",
+    "Untitled 2.md",
+    "Untitled.md",
     "hall.md",
     "Introduction.md",
     "Archives.md",
     "prendre le livre.md",
     "Clef des archives.md",
     "bureau.md",
-    "Archives_fermées.md",
-    "interieur_cuisine.md",
-    "ordi_ouvert_ao.md",
-    "bureau_ao.md"
+    "Archives_fermées.md"
   ]
 }
