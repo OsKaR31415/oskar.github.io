@@ -1,5 +1,4 @@
-znput = document.getElementById("input_date");
-aff = document.getElementById("aff");
+input = document.getElementById("input_date");
 
 DAYS = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
 
@@ -14,29 +13,32 @@ function toDay(n){
 }
 
 // pour stocker ta date secrète 
-secretDate = {
-  n: 0,
-  update: function(){
-  n = Math.floor(Math.random() * 1000)
-  aff.innerText = toDate(n)
-  },
-  good: function(d){d==toDay(n)},
+
+var secretDate;
+
+function random_date() {
+    secretDate = randomDate(new Date(2013, 1, 1), new Date(2013, 12, 31));
+    aff = document.getElementById("aff");
+    aff.innerText = secretDate.toString();
 }
 
+function randomDate(start, end) {
+    return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+}
 
 function check_date() {
-  let day_index = input.selectedIndex
-  
+  let day_index = input.value
+
   if (secretDate.good(day_index)){
       alert("c'est la bonne réponse !");
   }
   else {
     alert("mauvaise réponse")
   }
-  
+
   alert("la date secrète a changé")
-  
-  secretDate.update()
+
+  //secretDate.update()
 }
 
-secretDate.update()
+//secretDate.update()
