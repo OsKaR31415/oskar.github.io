@@ -5,16 +5,22 @@
         <title>OsKaR</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="javascript/replace_menu.js" type="text/javascript">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
-        <div w3-include-html="menu.html"></div>
-        <h1>Bienvenue à toi !</h1>
+    <div id ="menu"></div>
+    <script>
+        $(document).ready( function() {
+            $("#menu").load("menu.html");
+        });
+    </script>
 
-        <p>Ce site est consacré à des projets, des idées, ou des choses intéressantes sur les mathématiques et l'informatique. Bonne promenade dans ces mondes !</p>
+    <h1>Bienvenue à toi !</h1>
 
-        <!-- <a href="index.html"><span class="button">&nbsp;☰&nbsp;</span></a> -->
-        <!-- <a href="index.html"><span class="button">&nbsp;⇧&nbsp;</span></a> -->
+    <p>Ce site est consacré à des projets, des idées, ou des choses intéressantes sur les mathématiques et l'informatique. Bonne promenade dans ces mondes !</p>
+
+    <!-- <a href="index.html"><span class="button">&nbsp;☰&nbsp;</span></a> -->
+    <!-- <a href="index.html"><span class="button">&nbsp;⇧&nbsp;</span></a> -->
 
 
     </body>
