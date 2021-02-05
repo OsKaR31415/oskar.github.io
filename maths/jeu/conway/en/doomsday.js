@@ -1,15 +1,18 @@
 input = document.getElementById("input_date");
 
-DAYS = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+DAYS = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"];
 
 // pour stocker ta date secrète
 
 var secretDate;
 
+// simplement enlever weekday pour cacher le jour.
+const date_options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+
 function aff_random_date() {
     secretDate = random_date(new Date(2013, 1, 1), new Date(2013, 12, 31));
     aff = document.getElementById("aff");
-    aff.innerText = secretDate.toString();
+    aff.innerText = secretDate.toLocaleDateString(undefined, date_options);
 }
 
 function random_date(start, end) {
@@ -36,7 +39,7 @@ var day_int = {
     "friday": 5,
     "saturday": 6,
     "sunday": 0
-}
+};
 
 function day_to_int(day) {
     day = day.toLowerCase();
@@ -44,10 +47,16 @@ function day_to_int(day) {
     return day_int[day];
 }
 
-function check_date() {
-    let day = day_to_int(input.value);
+var day;
+var actual_day;
 
-    let actual_day = secret_day_number(secretDate);
+function check_date() {
+    // aff.innerText += "\n" + input.value;
+
+    let day = (input.value).toString();
+
+    let actual_day = secretDate;
+
 
     if (day == actual_day){
         alert("c'est la bonne réponse !");
@@ -56,7 +65,5 @@ function check_date() {
         alert("mauvaise réponse");
     }
 
-    //secretDate.update()
 }
 
-//secretDate.update()
