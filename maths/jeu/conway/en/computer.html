@@ -1,19 +1,21 @@
 <HTML>
 <head>
-    <title> Test date Oscar </title>
+    <title> Conway's computer </title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../../../../style.css">
-    <script src="doomsday.js"></script>
 </head>
 <body onload="aff_random_date()">
+    <div id="aff" style="max-height: 100px"></div>
     <form>
-        <span id="aff">
+        <span style="position: relative; text-align: center">
+            <img scr="../images/">
         </span>
         [photo ordi]
         <br><br>
-        <input type="text" id="input_date">
+        <input autocomplete="false" onchange="check_date()" type="text" id="input_date">
         <br><br>
-        <input type="submit" onclick="check_date()" value="Valider">
+        <!-- <input type="button" onclick="check_date()" value="Valider"> -->
     </form>
+    <script src="doomsday.js"></script>
 </body>
 </HTML>
