@@ -1,112 +1,114 @@
 :root {
 
-	--menu-height: 300pt;
+    --menu-height: 300pt;
 }
-
 
 
 body {
-	text-align: center;
-	color: white;
-	text-rendering: optimizeLegibility;
-	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    text-align: center;
+    color: white;
+    text-rendering: optimizeLegibility;
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
     font-weight: bold;
     font-size: 20pt;
 
-	background-color: RGB(40, 41, 35);
-	/*background-image: url('images/fond.jpg');*/
-	/*background-repeat: no-repeat;*/
-	/*background-attachment: fixed;  */
-  	/*background-size: cover;*/
+    background-color: RGB(40, 41, 35);
+    /*background-image: url('images/fond.jpg');*/
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: fixed;  */
+    /*background-size: cover;*/
 }
 
 body::after {
-   overflow: scroll;
+    overflow: scroll;
 }
 
 h1 {
-	font-size: 60pt;
-	font-family: Palatino;
-	font-weight: normal;
-	color: orange;
+    font-size: 60pt;
+    font-family: Palatino;
+    font-weight: normal;
+    color: orange;
 }
 
 h2 {
-	font-size: 40pt;
-	color: #0080FF;
+    font-size: 40pt;
+    color: #0080FF;
 }
 
 h3 {
-	font-size: 30pt;
-	font-family: Arial;
+    font-size: 30pt;
+    font-family: Arial;
 }
 
 h4 {
-	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
-	font-weight: lighter;
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    font-weight: lighter;
 }
 
 
 p {
-	font-size: 20pt;
-	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
-	color: white;
-	font-weight: lighter;
+    font-size: 20pt;
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    color: white;
+    font-weight: lighter;
 
-	text-align: left;
-	text-indent: 4ex;
+    text-align: left;
+    text-indent: 4ex;
 }
 
 .nom_site {
-	font-size: 45pt;
+    font-size: 45pt;
 
 }
 
-.button::before {
-    content: "⇨ ";
-}
-
-.button {
+button::before { content: "⇨ "; }
+button::after { innerHTML: "<br><br>"; }
+button {
     font-size: 25pt;
-    color: white;
-    text-decoration: none;
-    padding-top: 5px;
-    padding-right: 50%;
-    text-align: right;
-    background-color: orange;
-    border: solid;
-    border-color: darkorange;
+    font-family: sans-serif;
+    color: RGB(40, 41, 35);
+    padding: 5px 8px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
     border-radius: 7pt;
-    border-width: 3px;
-    /*position: absolute;*/
+    box-shadow: 50pt 9px grey;
+
+
+    background-color: #FFA500;
+    padding-top: 5px;
+    text-align: right;
+    transition: 0.3s;
+}
+button:hover {
+    /* background-color: darkorange; */
+    background-color: #FFA500aa;
+    box-shadow: 0px 9px grey;
     transition: 0.2s;
 }
-
-.button:hover {
-    color: black;
-    background-color: darkorange;
-    border-color: black;
-    border-width: 3px;
-    transition: 0.2s;
+button:active {
+    box-shadow: 0 5px darkgrey;
+    transform: translateY(5px);
 }
 
 
 
 .tel {
-	font-family: Menlo;
-	font-size: 14pt; /* correspond à 20pt en verdanna */
-	text-decoration: none; /*ATTENTION: il faut aussi modifier la balise <a></a> qui entoure le tel.*/
-	color: orange;
+    font-family: Menlo;
+    font-size: 14pt; /* correspond à 20pt en verdanna */
+    text-decoration: none; /*ATTENTION: il faut aussi modifier la balise <a></a> qui entoure le tel.*/
+    color: orange;
 
-	word-spacing: 2pt;
+    word-spacing: 2pt;
 
-	border-radius: 4pt;
-	border-width: 1px;
-	border-style: none;
+    border-radius: 4pt;
+    border-width: 1px;
+    border-style: none;
 }
 
 .tel:hover {
-	color: #2480FF;
+    color: #2480FF;
     text-decoration: underline;
 }
 
@@ -146,9 +148,9 @@ img {
 
 body > div::before {   
     content: "\
-42\
-\
-";
+    42\
+    \
+    ";
     font-size: 40px;
 }
 
@@ -164,108 +166,108 @@ body > div::before {
 |* INTEGRATION DU MENU *|
 |***********************|
 \***********************/
-/*
-header iframe {
+    /*
+    header iframe {
     border: none;
     border-width: -1cm;
     height: 50pt;
     width: 100%;
-}
-header iframe:hover {
-	height: var(--menu-height);
-}
-*/
+    }
+    header iframe:hover {
+    height: var(--menu-height);
+    }
+     */
 
-/******************************\
-|******************************|
-|* STYLE DES MENUS DÉROULANTS *|
-|******************************|
-\******************************/
+    /******************************\
+    |******************************|
+    |* STYLE DES MENUS DÉROULANTS *|
+    |******************************|
+    \******************************/
 
-title::after {
-	content: "OsKaR";
-}
+    title::after {
+        content: "OsKaR";
+    }
 
-nav{
-    width: 100%;
-    margin: -10 auto;
-    background-color: orange;
-    color: white;
-    position: fixed;
-    top: 0px;
-    font-size: 20px;
-}
+    nav{
+        width: 100%;
+        margin: -10 auto;
+        background-color: orange;
+        color: white;
+        position: fixed;
+        top: 0px;
+        font-size: 20px;
+    }
 
-nav ul{
-    list-style-type: none;
-}
+    nav ul{
+        list-style-type: none;
+    }
 
-nav ul li{
-    float: left;
-    width: 25%;
-    text-align: center;
-    position: relative;
-}
+    nav ul li{
+        float: left;
+        width: 25%;
+        text-align: center;
+        position: relative;
+    }
 
-nav ul::after{
-    content: "";
-    display: table;
-    clear: both;
-}
+    nav ul::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
 
-nav a{
-    display: block;
-    text-decoration: none;
-    color: white;
-    border-bottom: 2px solid transparent;
-    padding: -10px 0px;
-}
+    nav a{
+        display: block;
+        text-decoration: none;
+        color: white;
+        border-bottom: 2px solid transparent;
+        padding: -10px 0px;
+    }
 
-nav a:hover{
-    color: #0E692B;
-    border-bottom: 2px solid #0E692B;
-    transition: 0.2s;
-    font-weight: bold;
-}
+    nav a:hover{
+        color: #0E692B;
+        border-bottom: 2px solid #0E692B;
+        transition: 0.2s;
+        font-weight: bold;
+    }
 
 
-.sous_menu{
-    display: none;
-    box-shadow: 0px 1px 2px #CCC;
-    background-color: RGB(40, 41, 35);
-    color: white;
-    position: absolute;
-    width: 100%;
-    z-index: 1000;
-    font-size: 20pt;
-}
-nav > ul li:hover .sous_menu{
-    display: block;
-}
+    .sous_menu{
+        display: none;
+        box-shadow: 0px 1px 2px #CCC;
+        background-color: RGB(40, 41, 35);
+        color: white;
+        position: absolute;
+        width: 100%;
+        z-index: 1000;
+        font-size: 20pt;
+    }
+    nav > ul li:hover .sous_menu{
+        display: block;
+    }
 
-.sous_menu li{
-    float: none;
-    width: 100%;
-    text-align: left;
-    text-decoration: none;
-}
+    .sous_menu li{
+        float: none;
+        width: 100%;
+        text-align: left;
+        text-decoration: none;
+    }
 
-.sous_menu a{
-    padding: 10px;
-    border-bottom: none;
-}
-.sous_menu a:hover{
-    border-bottom: none;
-}
-.menu_deroulant > a::after{
-    content:" ▼";
-    font-size: 25px;
-}
+    .sous_menu a{
+        padding: 10px;
+        border-bottom: none;
+    }
+    .sous_menu a:hover{
+        border-bottom: none;
+    }
+    .menu_deroulant > a::after{
+        content:" ▼";
+        font-size: 25px;
+    }
 
-.menu_deroulant {
-    font-size: 25pt
-}
+    .menu_deroulant {
+        font-size: 25pt
+    }
 
-.menu {
-    font-size: 25pt
-}
+    .menu {
+        font-size: 25pt
+    }
