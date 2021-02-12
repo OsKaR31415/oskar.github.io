@@ -1,6 +1,7 @@
 :root {
 
     --menu-height: 300pt;
+    --background-color: RGB(40, 41, 35);
 }
 
 
@@ -12,7 +13,7 @@ body {
     font-weight: bold;
     font-size: 20pt;
 
-    background-color: RGB(40, 41, 35);
+    background-color: var(--background-color);
     /*background-image: url('images/fond.jpg');*/
     /*background-repeat: no-repeat;*/
     /*background-attachment: fixed;  */
@@ -62,34 +63,33 @@ p {
 }
 
 button::before { content: "⇨ "; }
-button::after { innerHTML: "<br><br>"; }
 button {
     font-size: 25pt;
     font-family: sans-serif;
-    color: RGB(40, 41, 35);
+    color: var(--background-color);
     padding: 5px 8px;
     text-align: center;
     cursor: pointer;
     outline: none;
-    border: none;
+    border: solid 1pt black;
     border-radius: 7pt;
-    box-shadow: 50pt 9px grey;
+    box-shadow: 0px 14px grey;
 
 
     background-color: #FFA500;
     padding-top: 5px;
     text-align: right;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 button:hover {
     /* background-color: darkorange; */
     background-color: #FFA500aa;
-    box-shadow: 0px 9px grey;
-    transition: 0.2s;
+    border: solid 1pt 
+    border-color: #FFA500aa;
 }
 button:active {
-    box-shadow: 0 5px darkgrey;
-    transform: translateY(5px);
+    box-shadow: 0 7px darkgrey;
+    transform: translateY(9px);
 }
 
 
