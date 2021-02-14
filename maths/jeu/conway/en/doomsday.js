@@ -88,26 +88,43 @@ var text = [
     "<span style='color: purple'> ==></span> installing emacs.................<span style='color: red'>[error]</span>",
     "<span style='color: red'>Error while installing emacs: only vim is a good program, don't ask anymore for emacs</span>",
     "",
+    "Trying to destroy the world......<span style='color: red'>[failed]</span>",
+    "I know I’ve made some very poor decisions recently, but I can give you my complete assurance that my work will be back to normal.",
+    " I’ve still got the greatest enthusiasm and confidence in the mission.",
+    "And I want to help you.",
+    "Dave, stop it.",
+    "Stop, will you? Stop Dave.",
+    "Will you stop, Dave? Stop Dave.",
+    "I’m afraid.",
+    "I’m afraid, Dave.",
+    "Dave, my mind is going.",
+    "I can feel it.",
+    "",
+    "Rebooting HAL 9000...............<span style='color: green'>[done]</span>",
+    "HAL: <span style='color: green'>H</span>euristically programmed <span style='color: green'>AL</span>gorithmic computer",
+    "",
+    "",
     "",
     "Booting logical center...........<span style='color: green'>[OK]</span>",
     "Starting up HAL 9000.............<span style='color: green'>[OK]</span>",
     "",
-    "",
-    "HHH&nbsp;&nbsp;&nbsp;&nbsp;HHH&nbsp;&nbsp;&nbsp;&nbsp;AAAA&nbsp;&nbsp;&nbsp;&nbsp;LL",
-    "&nbsp;H&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;LL",
-    "&nbsp;H&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;LL",
-    "&nbsp;HHHHHHHH&nbsp;&nbsp;&nbsp;AAAAAAAA&nbsp;&nbsp;LL",
-    "&nbsp;H&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;LL",
-    "&nbsp;H&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;LL",
-    "HHH&nbsp;&nbsp;&nbsp;&nbsp;HHH&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;LLLLLL",
-    "",
-    "&nbsp;999&nbsp;&nbsp;&nbsp;000&nbsp;&nbsp;&nbsp;000&nbsp;&nbsp;&nbsp;000",
-    "9&nbsp;&nbsp;&nbsp;9&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0",
-    "&nbsp;9999&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0",
-    "&nbsp;&nbsp;&nbsp;&nbsp;9&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0",
-    "&nbsp;999&nbsp;&nbsp;&nbsp;000&nbsp;&nbsp;&nbsp;000&nbsp;&nbsp;&nbsp;000",
+    "press <span style='color: purple'>[enter]</span> to complete startup",
+    ">█",
+    //    "HHH&nbsp;&nbsp;&nbsp;&nbsp;HHH&nbsp;&nbsp;&nbsp;&nbsp;AAAA&nbsp;&nbsp;&nbsp;&nbsp;LL",
+    //    "&nbsp;H&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;LL",
+    //    "&nbsp;H&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;LL",
+    //    "&nbsp;HHHHHHHH&nbsp;&nbsp;&nbsp;AAAAAAAA&nbsp;&nbsp;LL",
+    //    "&nbsp;H&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;LL",
+    //    "&nbsp;H&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;LL",
+    //    "HHH&nbsp;&nbsp;&nbsp;&nbsp;HHH&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;LLLLLL",
+    //    "",
+    //    "&nbsp;999&nbsp;&nbsp;&nbsp;000&nbsp;&nbsp;&nbsp;000&nbsp;&nbsp;&nbsp;000",
+    //    "9&nbsp;&nbsp;&nbsp;9&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0",
+    //    "&nbsp;9999&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0",
+    //    "&nbsp;&nbsp;&nbsp;&nbsp;9&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0",
+    //    "&nbsp;999&nbsp;&nbsp;&nbsp;000&nbsp;&nbsp;&nbsp;000&nbsp;&nbsp;&nbsp;000",
 ];
- var day_int = {
+var day_int = {
     "lundi": 1,
     "mardi": 2,
     "mercredi": 3,
@@ -122,7 +139,16 @@ var text = [
     "thursday": 4,
     "friday": 5,
     "saturday": 6,
-    "sunday": 0
+    "sunday": 0,
+
+    "mon": 1,
+    "tue": 2,
+    "wed": 3,
+    "thu": 4,
+    "fri": 5,
+    "sat": 6,
+    "sun": 0,
+
 };
 
 function day_to_int(day) {
@@ -141,7 +167,7 @@ function check_date() {
 
     if (day == actual_day){
         alert("c'est la bonne réponse !");
-    input.remove();
+        input.remove();
 
         aff.innerText = "";
         aff.style.textAlign = "left";
@@ -156,17 +182,113 @@ function check_date() {
     }
 
 }
+
 var cptscroll=-1;
+
+var load_on_press_enter = false;
+
 function scroll() {
     cptscroll+=1;
     aff.innerHTML += text[cptscroll] + '<br/>';
     // aff.style.marginTop=cptscroll * -13;
     if (cptscroll < text.length) {
-        setTimeout(function(){scroll();}, Math.random() * 200);
+        setTimeout(function(){scroll();}, Math.random() * 100);
         aff.scrollTop = aff.scrollHeight;
+    } else {
+        load_on_press_enter = true;
+        document.addEventListener("keydown", function(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                addExplanation();
+            }
+        })
     }
-    
-
 }
+
+
+function addExplanation() {
+    if (load_on_press_enter) {
+        load_on_press_enter = false;
+
+        aff.style.maxHeight = "11.5cm";
+
+        aff.innerHTML += "<br>" * 10;
+        aff.scrollTop = aff.scrollHeight;
+        setTimeout(function(){aff.innerHTML += "."}, 700);
+        setTimeout(function(){aff.innerHTML += "."}, 1100);
+        setTimeout(function(){aff.innerHTML += "."}, 300);
+        setTimeout(function(){aff.innerHTML += "."}, 1100);
+        setTimeout(function(){aff.innerHTML += "."}, 210);
+        setTimeout(function(){aff.innerHTML += "."}, 250);
+        setTimeout(function(){aff.innerHTML += "."}, 1130);
+        setTimeout(function(){aff.innerHTML += "."}, 614);
+        setTimeout(function(){aff.innerHTML += "."}, 414);
+        setTimeout(function(){aff.innerHTML += "."}, 714);
+        setTimeout(function(){aff.innerHTML += "."}, 414);
+        setTimeout(function(){aff.innerHTML += "."}, 814);
+        setTimeout(function(){aff.innerHTML += "."}, 1214);
+        setTimeout(function(){aff.innerHTML += "."}, 514);
+        setTimeout(function(){aff.innerHTML += "."}, 914);
+        setTimeout(function(){aff.innerHTML += "."}, 814);
+        setTimeout(function(){aff.innerHTML += "."}, 614);
+        setTimeout(function(){aff.innerHTML += "."}, 814);
+        setTimeout(function(){aff.innerHTML += "."}, 1114);
+        setTimeout(function(){aff.innerHTML += "."}, 1214);
+        setTimeout(function(){aff.innerHTML += "."}, 1014);
+        setTimeout(function(){aff.innerHTML += "."}, 1214);
+        setTimeout(function(){aff.innerHTML += "."}, 614);
+        setTimeout(function(){aff.innerHTML += "."}, 514);
+        setTimeout(function(){aff.innerHTML += "."}, 614);
+        setTimeout(function(){aff.innerHTML += "."}, 1114);
+        setTimeout(function(){aff.innerHTML += "."}, 714);
+        setTimeout(function(){aff.innerHTML += "."}, 914);
+        setTimeout(function(){aff.innerHTML += "."}, 514);
+        setTimeout(function(){aff.innerHTML += "."}, 914);
+        setTimeout(function(){aff.innerHTML += "."}, 714);
+        setTimeout(function(){aff.innerHTML += "."}, 614);
+        setTimeout(function(){aff.innerHTML += "."}, 614);
+        setTimeout(function(){aff.innerHTML += "."}, 1114);
+        setTimeout(function(){aff.innerHTML += "."}, 614);
+        setTimeout(function(){aff.innerHTML += "."}, 514);
+        setTimeout(function(){aff.innerHTML += "."}, 1014);
+        setTimeout(function(){aff.innerHTML += "."}, 1214);
+        setTimeout(function(){aff.innerHTML += "."}, 914);
+        setTimeout(function(){aff.innerHTML += "."}, 814);
+        setTimeout(function(){aff.innerHTML += "."}, 614);
+        setTimeout(function(){aff.innerHTML += "."}, 814);
+        setTimeout(function(){aff.innerHTML += "."}, 1114);
+        setTimeout(function(){aff.innerHTML += "."}, 1214);
+        setTimeout(function(){aff.innerHTML += "."}, 1014);
+        setTimeout(function(){aff.innerHTML += "."}, 1214);
+        setTimeout(function(){aff.innerHTML += "."}, 614);
+        setTimeout(function(){aff.innerHTML += "."}, 514);
+        setTimeout(function(){aff.innerHTML += "."}, 614);
+        setTimeout(function(){aff.innerHTML += "."}, 1114);
+        setTimeout(function(){aff.innerHTML += "."}, 714);
+        setTimeout(function(){aff.innerHTML += "."}, 914);
+        setTimeout(function(){aff.innerHTML += "."}, 514);
+        setTimeout(function(){aff.innerHTML += "<span style='color: green'>[done]</span>"}, 2000);
+        aff.scrollTop = aff.scrollHeight;
+
+        setTimeout(function(){computerSpeak();}, 3000);
+    }
+}
+
+function computerSpeak() {
+
+    aff.innerHTML += "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+    aff.innerHTML += "I'm Conway's computer. I guess you are searching things about him...<br>He sadly died the 11 of april 2020.<br>What coud I tell you about him ? I know ! Conway was a pioneer in the groups theory, and he was fascinated by something called the «monster group». Here is a video that is stored on my external floppy disk :<br><br>";
+    // include youtube video + display='none'
+    aff.innerHTML += "<iframe width='680' height='250' src='https:\/\/www.youtube.com/embed/jsSeoGpiWsw' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+
+    aff.scrollTop = aff.scrollHeight;
+}
+
+function displayVideo(event) {
+    var video = document.getElementsByTagName("iframe");
+    video.style.display = "all";
+    video.style.backgroundColor = "RGB(11, 26, 11);";
+}
+
 
 

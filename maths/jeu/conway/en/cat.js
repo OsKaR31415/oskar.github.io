@@ -9,6 +9,10 @@ var good_answers = [
 ]
 function check_answer() {
     if (((input.value).toString()).toLowerCase() in good_answers) {
-        alert("c'est la bonne réponse");
+        $("#dialog").dialog();
+
+    } else {
+        $("#dialog").dialog();
+
     }
 }
