@@ -1,5 +1,4 @@
 :root {
-t
     --menu-height: 300pt;
     --background-color: RGB(40, 41, 35);
 }
@@ -62,8 +61,8 @@ p {
 
 }
 
-button::before { content: "⇨ "; }
-button {
+a>button::before { content: "⇨ "; }
+a>button {
     font-size: 25pt;
     font-family: sans-serif;
     color: var(--background-color);
@@ -81,13 +80,13 @@ button {
     text-align: right;
     transition: 0.2s;
 }
-button:hover {
+a>button:hover {
     /* background-color: darkorange; */
     background-color: #FFA500aa;
     border: solid 1pt 
     border-color: #FFA500aa;
 }
-button:active {
+a>button:active {
     box-shadow: 0 7px darkgrey;
     transform: translateY(9px);
 }

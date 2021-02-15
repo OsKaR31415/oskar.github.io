@@ -7,12 +7,13 @@ var good_answers = [
     "the monster",
     "the monster group"
 ]
+
 function check_answer() {
     if (((input.value).toString()).toLowerCase() in good_answers) {
-        $("#dialog").dialog();
+        // $("#dialog").dialog();
+        alert("c'est bon !");
 
     } else {
-        $("#dialog").dialog();
-
+        alert("mauvaise réponse !");
     }
 }

@@ -25,6 +25,7 @@ function random_date(start, end) {
 function secret_day_number() {
     return secretDate.getDay();
 }
+
 var text = [
     "starting up......................<span style='color: green'>[OK]</span>",
     "Graphics.........................<span style='color: green'>[OK]</span>",
@@ -124,6 +125,7 @@ var text = [
     //    "&nbsp;&nbsp;&nbsp;&nbsp;9&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0",
     //    "&nbsp;999&nbsp;&nbsp;&nbsp;000&nbsp;&nbsp;&nbsp;000&nbsp;&nbsp;&nbsp;000",
 ];
+
 var day_int = {
     "lundi": 1,
     "mardi": 2,
@@ -167,7 +169,8 @@ function check_date() {
 
     if (day == actual_day){
         alert("c'est la bonne réponse !");
-        input.remove();
+        // input.remove();
+        input.style.display = "none";
 
         aff.innerText = "";
         aff.style.textAlign = "left";
@@ -199,6 +202,7 @@ function scroll() {
         document.addEventListener("keydown", function(event) {
             if (event.keyCode === 13) {
                 event.preventDefault();
+                input.style.display = "all";
                 addExplanation();
             }
         })
