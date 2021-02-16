@@ -111,19 +111,19 @@ var text = [
     "",
     "press <span style='color: purple'>[enter]</span> to complete startup",
     ">█",
-    //    "HHH&nbsp;&nbsp;&nbsp;&nbsp;HHH&nbsp;&nbsp;&nbsp;&nbsp;AAAA&nbsp;&nbsp;&nbsp;&nbsp;LL",
-    //    "&nbsp;H&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;LL",
-    //    "&nbsp;H&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;LL",
-    //    "&nbsp;HHHHHHHH&nbsp;&nbsp;&nbsp;AAAAAAAA&nbsp;&nbsp;LL",
-    //    "&nbsp;H&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;LL",
-    //    "&nbsp;H&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;LL",
-    //    "HHH&nbsp;&nbsp;&nbsp;&nbsp;HHH&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;LLLLLL",
-    //    "",
-    //    "&nbsp;999&nbsp;&nbsp;&nbsp;000&nbsp;&nbsp;&nbsp;000&nbsp;&nbsp;&nbsp;000",
-    //    "9&nbsp;&nbsp;&nbsp;9&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0",
-    //    "&nbsp;9999&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0",
-    //    "&nbsp;&nbsp;&nbsp;&nbsp;9&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0",
-    //    "&nbsp;999&nbsp;&nbsp;&nbsp;000&nbsp;&nbsp;&nbsp;000&nbsp;&nbsp;&nbsp;000",
+        //    "HHH&nbsp;&nbsp;&nbsp;&nbsp;HHH&nbsp;&nbsp;&nbsp;&nbsp;AAAA&nbsp;&nbsp;&nbsp;&nbsp;LL",
+        //    "&nbsp;H&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;LL",
+        //    "&nbsp;H&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;LL",
+        //    "&nbsp;HHHHHHHH&nbsp;&nbsp;&nbsp;AAAAAAAA&nbsp;&nbsp;LL",
+        //    "&nbsp;H&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;LL",
+        //    "&nbsp;H&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;LL",
+        //    "HHH&nbsp;&nbsp;&nbsp;&nbsp;HHH&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;LLLLLL",
+        //    "",
+        //    "&nbsp;999&nbsp;&nbsp;&nbsp;000&nbsp;&nbsp;&nbsp;000&nbsp;&nbsp;&nbsp;000",
+        //    "9&nbsp;&nbsp;&nbsp;9&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0",
+        //    "&nbsp;9999&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0",
+        //    "&nbsp;&nbsp;&nbsp;&nbsp;9&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0&nbsp;0&nbsp;&nbsp;&nbsp;0",
+        //    "&nbsp;999&nbsp;&nbsp;&nbsp;000&nbsp;&nbsp;&nbsp;000&nbsp;&nbsp;&nbsp;000",
 ];
 
 var day_int = {
@@ -168,7 +168,7 @@ function check_date() {
     let actual_day = secretDate.getDay();
 
     if (day == actual_day){
-        alert("c'est la bonne réponse !");
+        alert("Good anwer !");
         // input.remove();
         input.style.display = "none";
 
@@ -180,15 +180,13 @@ function check_date() {
         scroll() ;
     }
     else {
-        alert("mauvaise réponse");
+        alert("bad answer !");
         aff_random_date();
     }
-
 }
 
 var cptscroll=-1;
 
-var load_on_press_enter = false;
 
 function scroll() {
     cptscroll+=1;
@@ -198,85 +196,11 @@ function scroll() {
         setTimeout(function(){scroll();}, Math.random() * 100);
         aff.scrollTop = aff.scrollHeight;
     } else {
-        load_on_press_enter = true;
-        document.addEventListener("keydown", function(event) {
-            if (event.keyCode === 13) {
-                event.preventDefault();
-                input.style.display = "all";
-                addExplanation();
-            }
-        })
+        computerSpeak();
     }
 }
 
 
-function addExplanation() {
-    if (load_on_press_enter) {
-        load_on_press_enter = false;
-
-        aff.style.maxHeight = "11.5cm";
-
-        aff.innerHTML += "<br>" * 10;
-        aff.scrollTop = aff.scrollHeight;
-        setTimeout(function(){aff.innerHTML += "."}, 700);
-        setTimeout(function(){aff.innerHTML += "."}, 1100);
-        setTimeout(function(){aff.innerHTML += "."}, 300);
-        setTimeout(function(){aff.innerHTML += "."}, 1100);
-        setTimeout(function(){aff.innerHTML += "."}, 210);
-        setTimeout(function(){aff.innerHTML += "."}, 250);
-        setTimeout(function(){aff.innerHTML += "."}, 1130);
-        setTimeout(function(){aff.innerHTML += "."}, 614);
-        setTimeout(function(){aff.innerHTML += "."}, 414);
-        setTimeout(function(){aff.innerHTML += "."}, 714);
-        setTimeout(function(){aff.innerHTML += "."}, 414);
-        setTimeout(function(){aff.innerHTML += "."}, 814);
-        setTimeout(function(){aff.innerHTML += "."}, 1214);
-        setTimeout(function(){aff.innerHTML += "."}, 514);
-        setTimeout(function(){aff.innerHTML += "."}, 914);
-        setTimeout(function(){aff.innerHTML += "."}, 814);
-        setTimeout(function(){aff.innerHTML += "."}, 614);
-        setTimeout(function(){aff.innerHTML += "."}, 814);
-        setTimeout(function(){aff.innerHTML += "."}, 1114);
-        setTimeout(function(){aff.innerHTML += "."}, 1214);
-        setTimeout(function(){aff.innerHTML += "."}, 1014);
-        setTimeout(function(){aff.innerHTML += "."}, 1214);
-        setTimeout(function(){aff.innerHTML += "."}, 614);
-        setTimeout(function(){aff.innerHTML += "."}, 514);
-        setTimeout(function(){aff.innerHTML += "."}, 614);
-        setTimeout(function(){aff.innerHTML += "."}, 1114);
-        setTimeout(function(){aff.innerHTML += "."}, 714);
-        setTimeout(function(){aff.innerHTML += "."}, 914);
-        setTimeout(function(){aff.innerHTML += "."}, 514);
-        setTimeout(function(){aff.innerHTML += "."}, 914);
-        setTimeout(function(){aff.innerHTML += "."}, 714);
-        setTimeout(function(){aff.innerHTML += "."}, 614);
-        setTimeout(function(){aff.innerHTML += "."}, 614);
-        setTimeout(function(){aff.innerHTML += "."}, 1114);
-        setTimeout(function(){aff.innerHTML += "."}, 614);
-        setTimeout(function(){aff.innerHTML += "."}, 514);
-        setTimeout(function(){aff.innerHTML += "."}, 1014);
-        setTimeout(function(){aff.innerHTML += "."}, 1214);
-        setTimeout(function(){aff.innerHTML += "."}, 914);
-        setTimeout(function(){aff.innerHTML += "."}, 814);
-        setTimeout(function(){aff.innerHTML += "."}, 614);
-        setTimeout(function(){aff.innerHTML += "."}, 814);
-        setTimeout(function(){aff.innerHTML += "."}, 1114);
-        setTimeout(function(){aff.innerHTML += "."}, 1214);
-        setTimeout(function(){aff.innerHTML += "."}, 1014);
-        setTimeout(function(){aff.innerHTML += "."}, 1214);
-        setTimeout(function(){aff.innerHTML += "."}, 614);
-        setTimeout(function(){aff.innerHTML += "."}, 514);
-        setTimeout(function(){aff.innerHTML += "."}, 614);
-        setTimeout(function(){aff.innerHTML += "."}, 1114);
-        setTimeout(function(){aff.innerHTML += "."}, 714);
-        setTimeout(function(){aff.innerHTML += "."}, 914);
-        setTimeout(function(){aff.innerHTML += "."}, 514);
-        setTimeout(function(){aff.innerHTML += "<span style='color: green'>[done]</span>"}, 2000);
-        aff.scrollTop = aff.scrollHeight;
-
-        setTimeout(function(){computerSpeak();}, 3000);
-    }
-}
 
 function computerSpeak() {
 
