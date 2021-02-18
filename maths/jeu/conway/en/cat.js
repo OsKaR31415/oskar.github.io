@@ -17,7 +17,7 @@ function check_answer() {
         badAnswer();
         catAttacks();
 
-        setTimeout(backToHall, 3000);
+        setTimeout(backToHall, 6000);
     }
 }
 
@@ -29,19 +29,22 @@ var griffure = document.getElementById("griffure");
 
 function goodAnswer() {
     cat.remove();
+    document.getElementById("cat_prompt").remove();
     aff.innerHTML = "the cat leaves the corridor, and you can enter the kitchen";
-    document.getElementById("to_remove").remove();
 
     var button = document.getElementById("button");
+    var button_link = document.getElementById("button_link");
     button.innerHTML = "Go to the kitchen";
-    button.href = "kitchen.html";
+    button_link.href = "kitchen.html";
 
 }
 
 //////////////////////////////////////////////////
 
 function badAnswer() {
-    aff.innerHTML = "«" + input.value + "» is not the answer expected by the cat...<br>";
+    aff.innerHTML = "";
+    document.getElementById("cat_prompt").innerHTML = "«" + input.value + "» is not the answer expected by the cat...<br>";
+    document.getElementById("button").remove();
 }
 
 function catAttacks() {
