@@ -8,8 +8,7 @@ var secretDate;
 var aff;
 var input;
 // simplement enlever weekday pour cacher le jour.
-// const date_options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
-const date_options = {year: 'numeric', month: 'long', day: 'numeric'};
+const date_options = {weekday: undefined, year: 'numeric', month: 'long', day: 'numeric'};
 
 function aff_random_date() {
     secretDate = random_date(new Date(2013, 1, 1), new Date(2013, 12, 31));
