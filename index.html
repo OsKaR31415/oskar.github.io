@@ -7,7 +7,7 @@
         <link id="dark_css" rel="stylesheet" type="text/css" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
-    <body>
+    <bodY>
     <div id ="menu"></div>
     <script>
         $(document).ready( function() {
@@ -17,17 +17,18 @@
 
     <h1>Bienvenue à toi !</h1>
 
-    <p>Ce site est consacré à des projets, des idées diverses sur les mathématiques ou l'informatique. Bonne promenade dans ces mondes !!</p>
+    <p>Ce site est consacré à des projets, des idées diverses sur les mathématiques ou l'informatique. Bonne promenade dans ces mondes !</p>
 
     <!-- <a href="index.html"><span class="button">&nbsp;☰&nbsp;</span></a> -->
     <!-- <a href="index.html"><span class="button">&nbsp;⇧&nbsp;</span></a> -->
 
-    <button onclick="ToggleStyle()">L/D</button>
+    <button onclick="ToggleStyle()" id="style_button">Fond blanc</button>
 
 
     <script>
         dark_css = document.getElementById("dark_css");
         light_css = document.getElementById("light_css");
+        style_button = document.getElementById("style_button");
 
         dark_css.disabled = false;
         light_css.disabled = true;
@@ -36,9 +37,13 @@
             if (dark_css.disabled == false) {
                 dark_css.disabled = true;
                 light_css.disabled = false;
+
+                style_button.innerText = "Fond noir";
             } else {
                 dark_css.disabled = false;
                 light_css.disabled = true;
+
+                style_button.innerText = "Fond blanc";
             }
         }
     </script>
