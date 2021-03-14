@@ -3,7 +3,8 @@
     <head>
         <title>OsKaR</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link id="light_css" rel="stylesheet" type="text/css" href="style_light.css">
+        <link id="dark_css" rel="stylesheet" type="text/css" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
@@ -16,12 +17,31 @@
 
     <h1>Bienvenue à toi !</h1>
 
-    <p>Ce site est consacré à des projets, des idées, ou des choses intéressantes sur les mathématiques et l'informatique. Bonne promenade dans ces mondes !</p>
+    <p>Ce site est consacré à des projets, des idées diverses sur les mathématiques ou l'informatique. Bonne promenade dans ces mondes !</p>
 
     <!-- <a href="index.html"><span class="button">&nbsp;☰&nbsp;</span></a> -->
     <!-- <a href="index.html"><span class="button">&nbsp;⇧&nbsp;</span></a> -->
 
+    <button onclick="ToggleStyle()">L/D</button>
 
+
+    <script>
+        dark_css = document.getElementById("dark_css");
+        light_css = document.getElementById("light_css");
+
+        dark_css.disabled = false;
+        light_css.disabled = true;
+
+        function ToggleStyle() {
+            if (dark_css.disabled == false) {
+                dark_css.disabled = true;
+                light_css.disabled = false;
+            } else {
+                dark_css.disabled = false;
+                light_css.disabled = true;
+            }
+        }
+    </script>
     </body>
 </html>
 
