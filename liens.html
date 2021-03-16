@@ -53,6 +53,29 @@
 
 
 
+    <button onclick="ToggleStyle()" id="style_button">Fond blanc</button>
+
+
+    <script>
+        dark_css = document.getElementById("dark_css");
+        light_css = document.getElementById("light_css");
+        style_button = document.getElementById("style_button");
+
+        dark_css.disabled = false;
+        light_css.disabled = true;
+
+        function ToggleStyle() {
+            if (dark_css.disabled == false) {
+                dark_css.disabled = true;
+                light_css.disabled = false;
+                style_button.innerText = "Fond noir";
+            } else {
+                dark_css.disabled = false;
+                light_css.disabled = true;
+                style_button.innerText = "Fond blanc";
+            }
+        }
+    </script>
     </body>
     <!-- <script src="javascript/replace_menu.js" type="text/javascript" charset="utf-8" async defer></script> -->
 </html>

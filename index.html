@@ -7,7 +7,7 @@
         <link id="dark_css" rel="stylesheet" type="text/css" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
-    <bodY>
+    <body>
     <div id ="menu"></div>
     <script>
         $(document).ready( function() {
@@ -21,6 +21,10 @@
 
     <!-- <a href="index.html"><span class="button">&nbsp;☰&nbsp;</span></a> -->
     <!-- <a href="index.html"><span class="button">&nbsp;⇧&nbsp;</span></a> -->
+
+    <a href="maths/jeu/conway/en/intro.html">Got a minute ? Try my game !</a>
+
+    <br><br>
 
     <button onclick="ToggleStyle()" id="style_button">Fond blanc</button>
 
@@ -37,12 +41,10 @@
             if (dark_css.disabled == false) {
                 dark_css.disabled = true;
                 light_css.disabled = false;
-
                 style_button.innerText = "Fond noir";
             } else {
                 dark_css.disabled = false;
                 light_css.disabled = true;
-
                 style_button.innerText = "Fond blanc";
             }
         }

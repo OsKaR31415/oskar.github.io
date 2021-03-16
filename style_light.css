@@ -1,6 +1,6 @@
 :root {
     --menu-height: 300pt;
-    --background-color: RGB(230, 230, 230);
+    --background-color: RGB(240, 250, 250);
 }
 
 
@@ -90,15 +90,24 @@ a>button:active {
     box-shadow: 0 7px darkgrey;
     transform: translateY(9px);
 }
-
 #style_button {
-    border: solid 1pt black;
-    box-shadow: 0 10px darkgrey;
+    /* background-color: var(--background-color); */
+    background-color: darkorange;
+    color: var( --background-color);
+    font-size: 14pt;
+    border: solid 2pt black;
+    border-radius: 8pt;
+    box-shadow: 0 8px #888888;
+    width: 3cm;
 }
-#style_button::hover {
-    box-shadow: 0 7px darkgrey;
+#style_button:hover {
+    box-shadow: 0 5px #888888;
+    transform: translateY(3px);
 }
-
+#style_button:active {
+    box-shadow: 0 1px #888888;
+    transform: translateY(7px);
+}
 
 .tel {
     font-family: Menlo;
