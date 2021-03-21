@@ -204,7 +204,8 @@ function computerSpeak() {
     aff.style = "color: lightgreen; overflow: scroll; max-height: 11.5cm; width: 19.1cm; position: absolute; bottom: 8.13cm; left: 8cm; text-align: left; font-family: monospace; font-size: 14pt; background-color: RGB(11, 22, 11);";
 
     aff.innerHTML += "<br><br><br><br><br><br><br><br><br><br>";
-    aff.innerHTML += "I'm Conway's computer. I guess you are searching things about him...<br>He sadly died the 11 of april 2020.<br>What coud I tell you about him ? I know ! Conway was a pioneer in the groups theory, and he was fascinated by something called the «monster group». Here is a videogram stored on my external floppy disk :<br><br>";
+    aff.innerHTML += "Je suis l'ordinateur de Conway. J'imagine que vous cherchez des informations à son propos...<br>He est malheureusement mort le 11 avril 2020.<br>Que pourrais-je vous dire ? Je sais ! Conway était un pionier dans la théorie des groupes, et il était fasciné par quelque chose appelé le «groupe monstre». Voici un vidéogramme stocké dans ma disquette externe :<br><br>"
+
     // include youtube video + display='none'
     aff.innerHTML += "<iframe width='680' height='250' src='https:\/\/www.youtube.com/embed/jsSeoGpiWsw' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
 
