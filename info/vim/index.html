@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>OsKaR - informatique</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../../style_dark.css">
+        <link rel="stylesheet" type="text/css" href="../../style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id ="menu"></div>
+        <script>
+            $(document).ready( function() {
+                $("#menu").load("menu.html");
+            });
+        </script>
+
+        <h1>Vim</h1>
+
+        <p>Vim est un éditeur de texte spécialisé dans le code.</p>
+
+        <p>Cet éditeur est merveilleux car il utilise des raccourcis clavier extrêmement puissants. Vim est en fait basé sur l'idée que l'on modifie le code plus souvent que l'on écrit du code nouveau (ce qui est quasiment toujours vrai).</p>
+
+        <h2>L'édition modulaire</h2>
+
+        <p>Vim utilise ce qu'on appelle de l'édition modulaire (comme l'éditeur emacs par exemple), c'est-à-dire qu'il existe plusieurs modes différents, et qu'une même touche ne fait pas du tout la même chose dans deux modes différents.</p>
+
+        <p>Le mode principal de Vim est le mode "normal" (<em>normal mode</em> en anglais). Dans ce mode, on ne peut pas taper de texte : chaque touche du clavier sert pour un raccourci. Pour taper du texte, il faut entrer en mode "insertion" (<em>insert mode</em>). Il existe également d'autres modes, comme le mode "visuel" (<em>visual mode</em>) pour sélectionner du texte, ou le mode "commande" (<em>command mode</em>) pour taper des commandes sur le fichier (saufegarder, quitter...) ou bien sur des aspects visuels (gérer les onglets, les fenêtres etc...) ainsi que les réglages.</p>
+
+        <p>Voici une vidéo qui introduit cet éditeur :</p>
+
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/IHp5p6cN-jE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <p>Je devrais prochainement sortir une série de vidéos expliquant pas à pas son fonctionnement.</p>
+
+    </body>
+</html>
+

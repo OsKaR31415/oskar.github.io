@@ -2,43 +2,50 @@
 
 <html>
     <head>
-        <title>OsKaR - informatique</title>
+        <title>OsKaR - Jeu de la vie</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="../style.css">
+        <link rel="stylesheet" type="text/css" href="../../style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
-        <div><!-- menu -->
-            <nav>
-                <ul>
-                    <li class="menu"><a href="../index.html">Accueil</a></li>
-                    <li class="menu_deroulant"><a>Sujets</a>
-                        <ul class="sous_menu">
-                            <li><a class="sous_menu_content" href="info">Informatique</a>
-                                <ul>
-                                    <!-- TODO: ajouter APL ! -->
-                                    <!-- <li><a class="sousmenu_content" href="info/APL.html">APL</a></li> -->
-                                    <li><a class="soumenu_content" href="python.html">Python</a></li>
-                                    <li><a class="sousmenu_content" href="sublime/index.html">Sublime Text</a></li>
-                                    <li><a class="sousmenu_content" href="regex/index.html"</li>
-                                </ul>
-                            </li>
-                            <li><a href="../maths/index.html">Mathématiques</a>
-                                <ul>
-                                    <li><a href="../maths/jeu/index.html">Jeux Mathématiques</a></li>
-                                    <li><a href=""></a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu"><a href="../contact.html">Contact</a></li>
-                    <li class="menu"><a href="../liens.html">Liens</a></li>
-                </ul>
-            </nav>
-        </div>
+        <div id ="menu"></div>
+        <script>
+            $(document).ready( function() {
+                            $("#menu").load("menu.html");
+                        });
+        </script>
+
+        <h1>Le jeu de la vie</h1>
+
+        <p>Le jeu de la vie est la simulation d'un monde virtuel. Elle se base sur une grille de pixels, appelés "cellules", qui peuvent prendre 2 états : morte ou vivante.</p>
+
+
+
+        <span>
+            <p>Ce jeu n'est pas un jeu au sens habituel : c'est simplement une simulation, qui fonctionne donc toute seule une fois ses paramètres initiaux réglés. Ce type de jeu est parfois appelé un <em>no player game</em>, un "jeu sans joueurs".</p>
+
+            <p>Le jeu de la vie possède lui des règles très simples que voici :</p>
+
+            <h2>Les règles</h2>
+
+            <p>Dans le jeu de la vie, chaque cellule (chaque pixel de la grille) change d'état en fonction de règles définies à l'avance.</p>
+
+            <p>Ces règles sont uniquement calculées en fonction des voisins de chaque cellule, plus précisément, de son <strong>nombre de voisins vivants</strong>.</p>
+
+            <p>En fonction de son nombre de voisins, la cellule choisit un état suivant. Une fois que toutes les cellules ont calculé leur état suivant, elle passent toutes à l'état suivant.</p>
+
+            <p>Les règles sont divisées en 2 parties : si la cellule est déjà morte, ou si elle est vivante.</p>
+
+            <span><div style="text-align: left; padding-left: 30pt; margin-left: 10pt; border-left: 3pt solid white; ">
+                <h4 style="text-decoration: underline">Si la cellule est vivante</h4>
+                <li>si elle possède 2 ou 3 voisines vivantes : elle reste en vie</li>
+                <li>sinon, elle meurt</li>
+                <h4 style="text-decoration: underline">Si la cellule est morte</h4>
+                <li>si elle possède exactement 3 voisines vivantes : elle naît.</li>
+                <li>sinon, elle reste morte</li>
+            </div></span>
+
+        <h2>Code python :</h2>
 
     </body>
 </html>
-
-<iframe src="https://trinket.io/embed/python/d158b23c4a" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-
- 

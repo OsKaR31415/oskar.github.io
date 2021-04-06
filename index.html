@@ -3,13 +3,14 @@
     <head>
         <title>OsKaR</title>
         <meta charset="utf-8">
-        <link id="light_css" rel="stylesheet" type="text/css" href="style_light.css">
-        <link id="dark_css" rel="stylesheet" type="text/css" href="style.css">
+        <link id="dark_css" rel="stylesheet" type="text/css" href="style_dark.css">
+        <link id="light_css"rel="stylesheet" type="text/css" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
-    <div id ="menu"></div>
-    <script>
+    <div id ="menu">
+    </div>
+     <script>
         $(document).ready( function() {
             $("#menu").load("menu.html");
         });
@@ -24,33 +25,10 @@
 
     <a href="maths/jeu/conway/en/intro.html">Got a minute ? Try my game !</a>
 
-    <p>test</p>
-
     <br><br>
 
-    <button onclick="ToggleStyle()" id="style_button">Fond blanc</button>
 
 
-    <script>
-        dark_css = document.getElementById("dark_css");
-        light_css = document.getElementById("light_css");
-        style_button = document.getElementById("style_button");
-
-        dark_css.disabled = false;
-        light_css.disabled = true;
-
-        function ToggleStyle() {
-            if (dark_css.disabled == false) {
-                dark_css.disabled = true;
-                light_css.disabled = false;
-                style_button.innerText = "Fond noir";
-            } else {
-                dark_css.disabled = false;
-                light_css.disabled = true;
-                style_button.innerText = "Fond blanc";
-            }
-        }
-    </script>
     </body>
 </html>
 

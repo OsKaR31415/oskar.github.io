@@ -1,29 +1,49 @@
 <div><!-- menu -->
     <nav>
+        <ul><button onclick="ToggleStyle()" id="style_button">Fond noir</button></ul>
         <ul>
+            <li class="menu"></li>
             <li class="menu"><a href="index.html">Accueil</a></li>
             <li class="menu_deroulant"><a>Sujets</a>
                 <ul class="sous_menu">
                     <li><a class="sous_menu_content" href="info/index.html">Informatique</a>
                         <ul>
-                            <!-- TODO: ajouter APL ! -->
-                            <!-- <li><a class="sousmenu_content" href="info/APL.html">APL</a></li> -->
                             <li><a class="soumenu_content" href="info/python/index.html">Python</a></li>
-                            <li><a class="sousmenu_content" href="info/sublime/index.html">Sublime Text</a></li>
-                            <li><a class="sousmenu_content" href="info/regex/index.html"</li>
+                            <li><a class="sousmenu_content" href="info/vim/index.html">Vim</a></li>
+                            <li><a class="sousmenu_content" href="info/divers/index.html">Divers</a></li>
                         </ul>
                     </li>
                     <li><a href="maths/index.html">Mathématiques</a>
                         <ul>
                             <li><a href="maths/jeu/index.html">Jeux Mathématiques</a></li>
-                            <li><a href=""></a></li>
+                            <li><a href="maths/videos.html">Vidéos</a></li>
+                            <li><a href="maths/divers/index.html">Divers</a></li>
                         </ul>
                     </li>
                 </ul>
             </li>
-            <li class="menu"><a href="contact.html">Contact</a></li>
+            <li class="menu"><a href="contact.html">Présentation</a></li>
             <li class="menu"><a href="liens.html">Liens</a></li>
         </ul>
     </nav>
 </div>
+<script>
+    dark_css = document.getElementById("dark_css");
+    light_css = document.getElementById("light_css");
+    style_button = document.getElementById("style_button");
 
+    dark_css.disabled = true;
+    light_css.disabled = false;
+
+    function ToggleStyle() {
+        if (dark_css.disabled == false) {
+            dark_css.disabled = true;
+            light_css.disabled = false;
+            style_button.innerText = "Fond noir";
+        } else {
+            dark_css.disabled = false;
+            light_css.disabled = true;
+            style_button.innerText = "Fond blanc";
+        }
+    }
+</script>

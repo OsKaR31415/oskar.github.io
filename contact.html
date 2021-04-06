@@ -4,7 +4,8 @@
     <head>
         <title>OsKaR - contact</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link id="dark_css" rel="stylesheet" type="text/css" href="style_dark.css">
+        <link id="light_css"rel="stylesheet" type="text/css" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
@@ -17,7 +18,7 @@
 
         <h1>N'hésite pas à me contacter !</h1>
 
-        <p>Si tu as une idée de quelque-chose à ajouter, si tu trouves un problème dans le site, ou si tu prouves la conjecture de riemann, alors n'hésite pas : <bold>contacte moi !</bold> (surtout dans le dernier cas, et envoie ta preuve en pièce jointe 😂)</p>
+        <p>Si tu trouves un bug sur le site ou si tu as une remarque, n'hésite pas à me contacter !</p>
 
         <h3>Mon e-mail :</h3>
         <a href="mailto:oscar.plaisant@icloud.com"><p>oscar.plaisant@icloud.com</p></a>
@@ -25,31 +26,13 @@
         <!-- <a href="index.html"><span class="button">&nbsp;⇧&nbsp;</span></a> -->
 
 
-    <button onclick="ToggleStyle()" id="style_button">Fond blanc</button>
+        <h1>Présentation personnelle</h1>
+
+        <p>Je suis élève en classe de terminale, et passionné de mathématiques et d'informatique.</p>
+
+        <a href="presentation.html">Clickes ici pour en savoir plus sur mon parcours !</a>
 
 
-    <script>
-        dark_css = document.getElementById("dark_css");
-        light_css = document.getElementById("light_css");
-        style_button = document.getElementById("style_button");
 
-        dark_css.disabled = false;
-        light_css.disabled = true;
-
-        function ToggleStyle() {
-            if (dark_css.disabled == false) {
-                dark_css.disabled = true;
-                light_css.disabled = false;
-
-                style_button.innerText = "Fond noir";
-            } else {
-                dark_css.disabled = false;
-                light_css.disabled = true;
-
-                style_button.innerText = "Fond blanc";
-            }
-        }
-    </script>
     </body>
-    <script src="javascript/replace_menu.js" type="text/javascript" charset="utf-8" async defer></script>
 </html>
