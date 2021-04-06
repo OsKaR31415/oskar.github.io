@@ -1,4 +1,4 @@
-root {
+* root {
     --menu-height: 300pt;
     --background-color: RGB(40, 41, 35);
 }
@@ -12,7 +12,9 @@ body {
     font-weight: bold;
     font-size: 20pt;
 
-    background-color: var(--background-color);
+    /*background-color: var(--background-color);*/
+    background-color: RGB(40, 41, 35);
+    /* background-color: RGB(40, 41, 35); */
     /*background-image: url('images/fond.jpg');*/
     /*background-repeat: no-repeat;*/
     /*background-attachment: fixed;  */

@@ -34,16 +34,21 @@
 
     dark_css.disabled = true;
     light_css.disabled = false;
+    console.log("boutton de style chargé");
 
     function ToggleStyle() {
         if (dark_css.disabled == false) {
+            console.log("fond noir : dark=true, light=false");
             dark_css.disabled = true;
             light_css.disabled = false;
             style_button.innerText = "Fond noir";
         } else {
+            console.log("fond blanc : dark=false, light=true");
             dark_css.disabled = false;
             light_css.disabled = true;
             style_button.innerText = "Fond blanc";
         }
     }
+
 </script>
+

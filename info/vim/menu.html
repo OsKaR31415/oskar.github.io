@@ -1,6 +1,8 @@
 <div><!-- menu -->
     <nav>
+        <ul><button onclick="ToggleStyle()" id="style_button">Fond noir</button></ul>
         <ul>
+            <li class="menu"></li>
             <li class="menu"><a href="../../index.html">Accueil</a></li>
             <li class="menu_deroulant"><a>Sujets</a>
                 <ul class="sous_menu">
@@ -25,4 +27,28 @@
         </ul>
     </nav>
 </div>
+<script>
+    dark_css = document.getElementById("dark_css");
+    light_css = document.getElementById("light_css");
+    style_button = document.getElementById("style_button");
+
+    dark_css.disabled = true;
+    light_css.disabled = false;
+    console.log("boutton de style chargé");
+
+    function ToggleStyle() {
+        if (dark_css.disabled == false) {
+            console.log("fond noir : dark=true, light=false");
+            dark_css.disabled = true;
+            light_css.disabled = false;
+            style_button.innerText = "Fond noir";
+        } else {
+            console.log("fond blanc : dark=false, light=true");
+            dark_css.disabled = false;
+            light_css.disabled = true;
+            style_button.innerText = "Fond blanc";
+        }
+    }
+
+</script>
 
