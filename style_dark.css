@@ -254,12 +254,10 @@ body > div::before {
     nav > ul li:hover .sous_menu{
         display: block;
     }
-    nav > ul li:active .sous_menu{
+    nav > ul li:checked .sous_menu{
         display: block;
     }
-    nav > ul li:focus .sous_menu{
-        display: block;
-    }
+
 
     .sous_menu li{
         float: none;
